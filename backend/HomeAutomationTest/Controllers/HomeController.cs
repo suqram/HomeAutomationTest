@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
-//using System.Web.Http;
 using HomeAutomationTest.Models;
 
 namespace HomeAutomationTest.Controllers
@@ -25,29 +25,20 @@ namespace HomeAutomationTest.Controllers
             } }
         };
 
-        public IEnumerable<Home> Index()
+        public ActionResult Data()
         {
-            return homes;
+            return Json(homes, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpGet]
-        //[Route("allhomes")]
-        public IEnumerable<Home> GetAllHomes()
-        {
-            return homes;
-        }
-
-        //[HttpGet]
-        ////[Route("home")]
-        //public IHttpActionResult GetHome(string id)
+        //public ActionResult Data(string id)
         //{
         //    var home = homes.FirstOrDefault((h) => h.Id == id);
-        //    if(home == null)
+        //    if (home == null)
         //    {
-        //        return NotFound();
+        //        return  HttpNotFound();
         //    }
 
-        //    return Ok(home);
+        //    return Json(home, JsonRequestBehavior.AllowGet);
         //}
     }
 }
