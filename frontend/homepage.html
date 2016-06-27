@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Automation Testpage</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
@@ -11,6 +13,11 @@
     <script src="script/homeservice.js"></script>
 </head>
 <body>
+    <ul class="menu">
+        <li><a href="#/view/hus1">Hus 1</a></li>
+        <li><a href="#/view/hus2">Hus 2</a></li>
+    </ul>
+
     <div ng-view></div>
 </body>
 </html>

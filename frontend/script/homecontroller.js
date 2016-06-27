@@ -3,9 +3,10 @@
  */
 
 angular.module('myApp.controllers', [])
-    .controller('HomeController', ['$scope', 'HomeDataOp', function ($scope, HomeDataOp) {
+    .controller('HomeController', ['$scope', 'HomeDataOp', '$routeParams', function ($scope, HomeDataOp, $routeParams) {
     $scope.status;
     $scope.homeData;
+    var param1 = $routeParams.param1;
 
     // $scope.getHomeList = function () {
     //     HomeDataOp.getHomeList()
@@ -30,7 +31,7 @@ angular.module('myApp.controllers', [])
     };
         
     //$scope.getHomeList();
-    $scope.getCurrentHome('hus1');
+    $scope.getCurrentHome(param1);
 }])
 
 // var HomeService = angular.module('HomeService', [])
