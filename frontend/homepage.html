@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Home Automation Testpage</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/homecontroller.js"></script>
+    <script src="script/homeservice.js"></script>
 </head>
 <body>
-    <div id="content"></div>
-    <!-- <script type="text/babel" src="script/example.js"></script> -->
-    <script type="text/babel">
-        var CommentBox = React.createClass({
-
-        })
-    </script>
+<div ng-controller="MyCtrl1">
+    <table class="table">
+        <tr ng-repeat="h in homeData">
+            <td>{{ h.id }}</td>
+            <td>{{ h.id }}</td>
+        </tr>
+    </table>
+</div>
+<div ng-view></div>
 </body>
 </html>
