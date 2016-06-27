@@ -2,17 +2,17 @@
 
 <div class="well">
 
-  <table class="table table-striped table-bordered" ng-repeat="home in homeData">
+  <table class="table table-striped table-bordered">
     <thead>
         <tr>
-            <th class="span1">{{home.Id}}</th>
+            <th class="span1">{{homeData.Id}}</th>
             <th class="span2">Rum</th>
             <th class="span2">Temperatur</th>
             <th class="span1">Luftfuktighet</th>
         </tr>
     </thead>
       <tbody>
-        <tr ng-repeat="room in home.Rooms">
+        <tr ng-repeat="room in homeData.Rooms">
             <td class="text-center"></td>
             <td class="text-center">{{room.Name}}</td>
             <td class="text-center">{{room.Temperature}}</td>

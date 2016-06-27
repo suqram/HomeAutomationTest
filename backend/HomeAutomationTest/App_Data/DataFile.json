@@ -1,0 +1,42 @@
+﻿[
+  {
+    "Id": "Hus1",
+    "Rooms": [
+      {
+        "Name": "Hall",
+        "Temperature": 21.3,
+        "Humidity": 75
+      },
+      {
+        "Name": "Kök",
+        "Temperature": 22,
+        "Humidity": 74
+      },
+      {
+        "Name": "Sovrum",
+        "Temperature": 19.5,
+        "Humidity": 69
+      }
+    ]
+  },
+  {
+    "Id": "Hus2",
+    "Rooms": [
+      {
+        "Name": "Farstu",
+        "Temperature": -3,
+        "Humidity": 95
+      },
+      {
+        "Name": "Kök",
+        "Temperature": 22,
+        "Humidity": 74
+      },
+      {
+        "Name": "Vardagsrum",
+        "Temperature": 21.7,
+        "Humidity": 77
+      }
+    ]
+  }
+]

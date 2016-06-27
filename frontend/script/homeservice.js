@@ -16,12 +16,9 @@
 // }]);
 
 angular.module('myApp.services', ['ngResource'])
-    .factory('HomeDataOp', function($resource){
-        return $resource('http://localhost:63761/home/data', {})
-    })
-    .factory('AngularIssues', function($resource){
-        return $resource('https://api.github.com/repos/angular/angular.js/issues/:number',
-            {number: '@number'},
-            {getIssue: {method: 'GET', params: {number: 0}}}
+    .factory('HomeDataOp', function ($resource) {
+        return $resource('http://localhost:63761/home/:id',
+            { id: '@id' },
+            { getHome: { method: 'GET', params: { id: 0 } } }
         )
     });

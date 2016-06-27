@@ -22,8 +22,15 @@ angular.module('myApp.controllers', [])
             $scope.homeData = data;
         });
     };
+
+    $scope.getCurrentHome = function (id) {
+        HomeDataOp.getHome({ id: id }, function (data) {
+            $scope.homeData = data;
+        });
+    };
         
-    $scope.getHomeList();
+    //$scope.getHomeList();
+    $scope.getCurrentHome('hus1');
 }])
 
 // var HomeService = angular.module('HomeService', [])
