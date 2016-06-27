@@ -17,7 +17,7 @@
 
 angular.module('myApp.services', ['ngResource'])
     .factory('HomeDataOp', function($resource){
-        return $resource('http://10.211.55.3:63761/home/data', {})
+        return $resource('http://localhost:63761/home/data', {})
     })
     .factory('AngularIssues', function($resource){
         return $resource('https://api.github.com/repos/angular/angular.js/issues/:number',

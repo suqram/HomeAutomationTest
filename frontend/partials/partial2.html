@@ -2,27 +2,22 @@
 
 <div class="well">
 
-  <label>Issue State</label>
-
-  <table class="table table-striped table-bordered">
+  <table class="table table-striped table-bordered" ng-repeat="home in homeData">
     <thead>
-    <tr>
-      <th class="span1">Number</th>
-      <th class="span2 sortable" ng-class="sortClass('created')" ng-click="setSort('created')">Created</th>
-      <th class="span2 sortable" ng-class="sortClass('updated')" ng-click="setSort('updated')">Updated</th>
-      <th class="span1 sortable" ng-class="sortClass('comments')" ng-click="setSort('comments')">Comments</th>
-      <th class="span1">State</th>
-      <th class="span2">Reporter</th>
-      <th>Title</th>
-    </tr>
+        <tr>
+            <th class="span1">{{home.Id}}</th>
+            <th class="span2">Rum</th>
+            <th class="span2">Temperatur</th>
+            <th class="span1">Luftfuktighet</th>
+        </tr>
     </thead>
-    <tbody>
-    <tr ng-repeat="issue in homeData.homeList | filter:filterText">
-      <td class="text-center">{{id}}</td>
-      <td class="text-center">{{Rooms.Name}}</td>
-      <td class="text-center">{{Rooms.Temperature}}</td>
-      <td class="text-center">{{Rooms.Humidity}}</td>
-    </tr>
+      <tbody>
+        <tr ng-repeat="room in home.Rooms">
+            <td class="text-center"></td>
+            <td class="text-center">{{room.Name}}</td>
+            <td class="text-center">{{room.Temperature}}</td>
+            <td class="text-center">{{room.Humidity}}</td>
+        </tr>
     </tbody>
   </table>
 </div>
