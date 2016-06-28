@@ -13,21 +13,12 @@ namespace HomeAutomationTest
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Rest-path, only get implemented
             routes.MapRoute(
                 name: "Home",
-                url: "home/{id}",
+                url: "home/{id}/data",
                 defaults: new { controller = "Home", action = "HouseData" }
             );
-            //routes.MapRoute(
-            //    name: "Alternate",
-            //    url: "{controller}/{action}",
-            //    defaults: new { controller = "Home", action = "Data" }
-            //);
-            //routes.MapRoute(
-            //    name: "Default",
-            //    url: "{controller}/{action}/{id}",
-            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            //);
         }
     }
 }

@@ -1,6 +1,6 @@
 <h1 class="lead">{{homeData.Id}}</h1>
 
-<div class="well">
+<div class="well" ng-controller="RefreshController">
 
   <table class="table table-striped table-bordered">
     <thead>
@@ -18,4 +18,5 @@
         </tr>
     </tbody>
   </table>
+    <p>{{message}}</p>
 </div>

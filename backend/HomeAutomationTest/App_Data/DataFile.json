@@ -4,12 +4,12 @@
     "Rooms": [
       {
         "Name": "Hall",
-        "Temperature": 21.3,
+        "Temperature": 22.3,
         "Humidity": 73
       },
       {
         "Name": "Kök",
-        "Temperature": 22,
+        "Temperature": 22.2,
         "Humidity": 74
       },
       {
@@ -24,7 +24,7 @@
     "Rooms": [
       {
         "Name": "Farstu",
-        "Temperature": -3,
+        "Temperature": -2,
         "Humidity": 95
       },
       {
